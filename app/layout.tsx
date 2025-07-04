@@ -11,22 +11,22 @@ import { cookieToInitialState } from "wagmi";
 import { PrivyProvider } from "@privy-io/react-auth";
 const font = Outfit({ subsets: ["latin"] });
 
-const zkEVMCardonaTestnet = defineChain({
-  id: 2442,
-  name: "Polygon zkEVM Cardona Testnet",
-  network: "Polygon zkEVM Cardona Testnet",
+const BitTorrent = defineChain({
+  id: 1029,
+  name: "BitTorrent Chain Test",
+  network: "BitTorrent Chain Test",
   nativeCurrency: {
     decimals: 18,
-    name: "Polygon zkEVM Cardona Testnet",
-    symbol: "ETH",
+    name: "BitTorrent Chain Testnet",
+    symbol: "BTTC",
   },
   rpcUrls: {
     default: {
-      http: ["https://polygon-zkevm-cardona.blockpi.network/v1/rpc/public"],
+      http: ["http://pre-rpc.bt.io/"],
     },
   } as any,
   blockExplorers: {
-    default: { name: "Explorer", url: "https://cardona-zkevm.polygonscan.com" },
+    default: { name: "Explorer", url: "https://testscan.bt.io" },
   },
 }) as any;
 
@@ -39,7 +39,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={font.className}>
         <PrivyProvider
-          appId="clwci9fzm00w7ro85bx6jarr5"
+          appId="cmcp2lrma009mjv0my3hu57ht" //API key1
           config={{
             appearance: {
               theme: "light",
@@ -49,8 +49,8 @@ export default function RootLayout({
             embeddedWallets: {
               createOnLogin: "users-without-wallets",
             },
-            defaultChain: zkEVMCardonaTestnet,
-            supportedChains: [zkEVMCardonaTestnet],
+            defaultChain: BitTorrent,
+            supportedChains: [BitTorrent],
           }}
         >
           {children}

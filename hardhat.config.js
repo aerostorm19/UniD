@@ -40,5 +40,4 @@ module.exports = {
   loggingEnabled: true,
 };
 
-// 83462bcaacfb352a27147a908ebf24c5 - client ID
-// s7BvH-aXDBsdW0qFMA77FEfI1TWeYAq1dciCqbvZwIrjcHcNx0vSEi2xv5_eFF-bJ6A_C9Mkch7r5IWbih2wvw - secrete key
+// npx hardhat ignition deploy ./ignition/modules/Lock.js --network BitTorrent
